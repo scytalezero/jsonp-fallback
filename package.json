@@ -1,0 +1,31 @@
+{
+  "name": "jsonp-fallback",
+  "version": "1.0.0",
+  "description": "Meant for use in both the browser and node, this module will use 'jsonp' if instantiated in a browser and 'axios' if in node. In both cases a promise will be returned.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/tests.js | tap-prettify -",
+    "test-browser": "browserify test/tests.js | browser-run | tap-prettify -",
+    "build": "browserify index.js > jsonp-fallback.js"
+  },
+  "keywords": [
+    "jsonp",
+    "axios",
+    "promise",
+    "fallback"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scytalezero/jsonp-fallback.git"
+  },
+  "author": "scytalezero",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.9.1",
+    "jsonp": "^0.2.0"
+  },
+  "devDependencies": {
+    "tap-prettify": "0.0.2",
+    "tape": "^4.5.1"
+  }
+}
