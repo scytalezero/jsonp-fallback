@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tape test/tests.js | tap-prettify -",
     "test-browser": "browserify test/tests.js | browser-run | tap-prettify -",
-    "build": "browserify index.js > jsonp-fallback.js"
+    "build": "browserify index.js > jsonp-fallback.js",
+    "docs": "jsdox index.js && copy /Y output\\index.md .\\readme.md"
   },
   "keywords": [
     "jsonp",
