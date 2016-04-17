@@ -26,6 +26,7 @@
     "jsonp": "^0.2.0"
   },
   "devDependencies": {
+    "jsdox": "^0.4.9",
     "tap-prettify": "0.0.2",
     "tape": "^4.5.1"
   }
