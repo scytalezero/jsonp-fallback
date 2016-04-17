@@ -1,6 +1,4 @@
 {
-	// See http://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
 	"version": "0.1.0",
 	"command": "npm",
 	"isShellCommand": true,
@@ -16,12 +14,20 @@
 			"args": ["update"]
 		},
 		{
-			"taskName": "test-browser",
-			"args": ["run", "test-browser"]
+			"taskName": "build",
+			"args": ["run", "build"]
 		},
 		{
 			"taskName": "test",
 			"args": ["test"]
+		},
+		{
+			"taskName": "test-browser",
+			"args": ["run", "test-browser"]
+		},
+		{
+			"taskName": "docs",
+			"args": ["run", "docs"]
 		}
 	]
 }
