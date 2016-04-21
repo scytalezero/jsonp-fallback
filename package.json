@@ -23,7 +23,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.9.1",
-    "jsonp": "^0.2.0"
+    "jsonp": "^0.2.0",
+    "qs": "^6.1.0"
   },
   "devDependencies": {
     "jsdox": "^0.4.9",
