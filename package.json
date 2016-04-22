@@ -4,8 +4,8 @@
   "description": "Meant for use in both the browser and node, this module will use 'jsonp' if instantiated in a browser and 'axios' if in node. In both cases a promise will be returned.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/tests.js | tap-prettify -",
-    "test-browser": "browserify test/tests.js | browser-run | tap-prettify -",
+    "test": "tape test/tests.js",
+    "test-browser": "browserify test/tests.js | browser-run",
     "build": "node index.js",
     "docs": "jsdox index.js && copy /Y output\\index.md .\\readme.md"
   },
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "jsdox": "^0.4.9",
-    "tap-prettify": "0.0.2",
     "tape": "^4.5.1"
   }
 }
