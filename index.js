@@ -44,7 +44,7 @@ if (isBrowser()) {
 
 /**
  * Execute a GET request using JSONP if in a browser environment.
- * ``` js
+ * @example
  * const jsonpFallback = require("jsonp-fallback")
  * 
  * jsonpFallback("https://www.omdbapi.com/", {"i": "tt3397884"})
@@ -52,7 +52,6 @@ if (isBrowser()) {
  *     console.log(data)
  *   })
  *   .catch(console.error)
- * ```
  * @function exports
  * @param {String} url A resource that can be accessed using JSONP
  * @param {Object} data Parameters to be encoded for the querystring

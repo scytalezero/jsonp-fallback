@@ -7,7 +7,7 @@
     "test": "tape test/tests.js",
     "test-browser": "browserify test/tests.js | browser-run",
     "build": "node index.js",
-    "docs": "jsdox index.js && copy /Y output\\index.md .\\readme.md"
+    "docs": "jsdoc2md index.js > readme.md"
   },
   "keywords": [
     "jsonp",
@@ -27,7 +27,6 @@
     "qs": "^6.1.0"
   },
   "devDependencies": {
-    "jsdox": "^0.4.9",
     "tape": "^4.5.1"
   }
 }
