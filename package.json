@@ -4,8 +4,8 @@
   "description": "Meant for use in both the browser and node, this module will use 'jsonp' if instantiated in a browser and 'axios' if in node. In both cases a promise will be returned.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/tests.js",
-    "test-browser": "browserify test/tests.js | browser-run",
+    "test": "tape test/tests.js | tap-difflet",
+    "test-browser": "browserify test/tests.js | browser-run | tap-difflet",
     "build": "node index.js",
     "docs": "jsdoc2md index.js > readme.md"
   },
@@ -22,11 +22,12 @@
   "author": "scytalezero",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.9.1",
+    "axios": "^0.15.1",
     "jsonp": "^0.2.0",
-    "qs": "^6.1.0"
+    "qs": "^6.3.0"
   },
   "devDependencies": {
+    "tap-difflet": "^0.7.0",
     "tape": "^4.5.1"
   }
 }
