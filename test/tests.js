@@ -5,9 +5,9 @@ const isBrowser = new Function("try {return this===window;}catch(e){ return fals
 
 tape("Retrieve from history", t => {
   t.plan(1)
-  jsonpFallback("https://www.omdbapi.com/", {"type": "movie", "i": "tt3397884"})
+  jsonpFallback("https://www.googleapis.com/books/v1/volumes/b_M9PgAACAAJ")
     .then(data => {
-      t.equal(data.Title, "Sicario", `Wrong record: ${data.Title}`)
+      t.equal(data.volumeInfo.title, "Altered Carbon", `should retrieve 1 book: ${data.volumeInfo.title}`)
     })  
     .catch(err => {
       t.fail(err)
@@ -15,9 +15,9 @@ tape("Retrieve from history", t => {
 })
 tape("Empty result", t => {
   t.plan(1)
-  jsonpFallback("https://www.omdbapi.com/", {"type": "movie", "i": "tt33"})
+  jsonpFallback("https://www.googleapis.com/books/v1/volumes", {"q": "retwhjerklghklsdgh"})
     .then(data => {
-      t.equal(data.Response, "False", `Not empty record: ${data.Response}`)
+      t.equal(data.totalItems, 0, `should return empty record: ${data.totalItems}`)
     })  
     .catch(err => {
       t.fail(err)
@@ -25,7 +25,7 @@ tape("Empty result", t => {
 })
 tape("Failures should bubble", t => {
   t.plan(1)
-  jsonpFallback("https://www.omdbapi.comx/", {"type": "movie", "i": "tt3397884"})
+  jsonpFallback("https://www.googleapis.xcom/books/v1/volumes/b_M9PgAACAAJ")
     .then(data => {
       t.fail("Should not succeed.")
     })
@@ -35,9 +35,9 @@ tape("Failures should bubble", t => {
 })
 tape("Custom callback function name", t => {
   t.plan(1)
-  jsonpFallback("https://www.omdbapi.com/", {"type": "movie", "i": "tt3397884"}, {"prefix": "__ok"})
+  jsonpFallback("https://www.googleapis.com/books/v1/volumes/b_M9PgAACAAJ", null, {"prefix": "__ok"})
     .then(data => {
-      t.equal(data.Title, "Sicario")
+      t.equal(data.volumeInfo.title, "Altered Carbon", `should still retrieve 1 book: ${data.volumeInfo.title}`)
     })  
     .catch(err => {
       t.fail(err)
