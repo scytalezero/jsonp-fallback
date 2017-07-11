@@ -27,6 +27,7 @@
     "qs": "^6.3.0"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^3.0.0",
     "browser-run": "^4.0.3",
     "browserify": "^14.4.0",
     "tap-difflet": "^0.7.0",

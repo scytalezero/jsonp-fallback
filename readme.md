@@ -8,7 +8,7 @@
 ### jsonp-fallback~exports(url, data, params) ⇒ <code>Promise</code>
 Execute a GET request using JSONP if in a browser environment.
 
-**Kind**: inner method of <code>[jsonp-fallback](#module_jsonp-fallback)</code>  
+**Kind**: inner method of [<code>jsonp-fallback</code>](#module_jsonp-fallback)  
 **Returns**: <code>Promise</code> - Contains the data or error if one was encountered  
 
 | Param | Type | Description |
